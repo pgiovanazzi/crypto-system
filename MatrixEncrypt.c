@@ -70,6 +70,7 @@ void matrix_decode(ValueTable *vt) {
 int main(int argc, char *argv[]) {
   char msg[100];
   int ml = 0;
+	// Formato de entrada
   char format[] = "%[^\n]%*c";
   printf("Ingrese el mensaje a codificar:\n");
   scanf(format, msg);
