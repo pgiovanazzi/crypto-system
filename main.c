@@ -1,5 +1,5 @@
-#include "MatrixEncrypt.h"
 #include <stdio.h>
+#include "MatrixEncrypt.h"
 
 // Entrada del mensaje.
 static void matrix_input(char msgIn[]) {
@@ -11,7 +11,7 @@ static void matrix_input(char msgIn[]) {
 
 // Muestra los numeros de la tabla asociados univocamente a cada caracter del
 // mensaje.
-static void show_output_interface(const char *format, ValueTable *vtIn) {
+static void show_output_interface(const char* format, ValueTable* vtIn) {
   printf("%-21s", format);
   for (size_t i = 0; i < vtIn->sz; i++) {
     printf("%d", vtIn->data[i]);
@@ -20,7 +20,7 @@ static void show_output_interface(const char *format, ValueTable *vtIn) {
 }
 
 // Muestra la decodificacion del mensaje.
-static void show_output_decode(ValueTable *vtIn) {
+static void show_output_decode(ValueTable* vtIn) {
   printf("Su mensaje es: ");
   for (size_t i = 0; i < vtIn->sz; i++) {
     printf("%c", TABLE[vtIn->data[i]]);
@@ -28,14 +28,14 @@ static void show_output_decode(ValueTable *vtIn) {
   puts("");
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
   char msg[100];
   int msgLen = 0;
 
   matrix_input(msg);
   set_length_msg(msg, &msgLen);
 
-  ValueTable *vt = matrix_value(msg, msgLen);
+  ValueTable* vt = matrix_value(msg, msgLen);
 
   show_output_interface("Tabla sin codificar:", vt);
 

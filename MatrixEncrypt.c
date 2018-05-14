@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-ValueTable *matrix_value(char msgIn[], int msgLenIn) {
-  ValueTable *vt = malloc(sizeof(ValueTable));
+ValueTable* matrix_value(char msgIn[], int msgLenIn) {
+  ValueTable* vt = malloc(sizeof(ValueTable));
   vt->sz = msgLenIn + ((msgLenIn % 3 != 0) ? (3 - msgLenIn % 3) : 0);
   vt->data = malloc(sizeof(int) * vt->sz);
 
@@ -25,9 +25,9 @@ ValueTable *matrix_value(char msgIn[], int msgLenIn) {
 // Toma una tabla de valores, una matriz de codificacion/decodificacion y un
 // entero que representara el inicio de cada terna de numeros para
 // multiplicarlos con la matriz.
-static void matrix_multiply(ValueTable *vt, const int matrix[][3], int init) {
+static void matrix_multiply(ValueTable* vt, const int matrix[][3], int init) {
   int code;
-  int *data = malloc(sizeof(int) * 3);
+  int* data = malloc(sizeof(int) * 3);
   for (size_t i = 0; i < 3; i++) {
     data[i] = vt->data[init + i];
   }
@@ -41,25 +41,25 @@ static void matrix_multiply(ValueTable *vt, const int matrix[][3], int init) {
   free(data);
 }
 
-void matrix_encode(ValueTable *vtIn) {
+void matrix_encode(ValueTable* vtIn) {
   for (size_t i = 0; i < vtIn->sz; i += 3) {
     matrix_multiply(vtIn, MATRIX_C, i);
   }
 }
 
-void set_length_msg(char *msgIn, int *msgLenIn) {
+void set_length_msg(char* msgIn, int* msgLenIn) {
   // Ajustamos el tamaño
   for (; msgIn[*msgLenIn]; (*msgLenIn)++)
     ;
 }
 
-void matrix_decode(ValueTable *vtIn) {
+void matrix_decode(ValueTable* vtIn) {
   for (size_t i = 0; i < vtIn->sz; i += 3) {
     matrix_multiply(vtIn, MATRIX_D, i);
   }
 }
 
-void matrix_destroy(ValueTable *vtIn) {
+void matrix_destroy(ValueTable* vtIn) {
   free(vtIn->data);
   free(vtIn);
 }
