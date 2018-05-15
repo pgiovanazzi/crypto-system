@@ -8,7 +8,7 @@ ___
 
 * Se necesita el gcc instalado
 * Escribimos en la terminal $gcc -o NombreDelEjecutable main.c MatrixEncrypt.c
-* Luego lo ejecutamos $./test
+* Luego lo ejecutamos $./NombreDelEjecutable
 
 Ejemplo:
 ~~~
