@@ -52,6 +52,7 @@ unsigned set_length_msg(char* msgIn) {
   // Ajustamos el tamaño
   for (; msgIn[msgLen]; msgLen++)
     ;
+	return msgLen;
 }
 
 void matrix_decode(ValueTable* vtIn) {
