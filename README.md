@@ -2,9 +2,9 @@
 
 ### Resumen ###
 
-Encripta y desencripta un mensaje utilizando una matriz de 3x3 de enteros.
+Encripta y desencripta un mensaje utilizando una matriz y su inversa de 3x3 de enteros.
 ___
-### ï¿½Como ejecutarlo? ###
+### ¿Como ejecutarlo? ###
 
 * Se necesita el gcc instalado
 * Escribimos en la terminal $gcc -o NombreDelEjecutable main.c MatrixEncrypt.c
