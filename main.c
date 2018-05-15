@@ -30,12 +30,10 @@ static void show_output_decode(ValueTable* vtIn) {
 
 int main(int argc, char* argv[]) {
   char msg[100];
-  int msgLen = 0;
 
   matrix_input(msg);
-  set_length_msg(msg, &msgLen);
 
-  ValueTable* vt = matrix_value(msg, msgLen);
+  ValueTable* vt = matrix_value(msg, set_length_msg(msg));
 
   show_output_interface("Tabla sin codificar:", vt);
 

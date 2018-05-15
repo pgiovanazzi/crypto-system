@@ -47,9 +47,10 @@ void matrix_encode(ValueTable* vtIn) {
   }
 }
 
-void set_length_msg(char* msgIn, int* msgLenIn) {
+unsigned set_length_msg(char* msgIn) {
+	unsigned msgLen = 0;
   // Ajustamos el tamaño
-  for (; msgIn[*msgLenIn]; (*msgLenIn)++)
+  for (; msgIn[msgLen]; msgLen++)
     ;
 }
 

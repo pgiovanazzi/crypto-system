@@ -8,13 +8,14 @@ typedef struct _ValueTable {
   int* data;
 } ValueTable;
 
-// tabla de caracteres con los valores del indice de un arreglo.
+// Tabla de caracteres (los caracteres estan asociados a los valores del indice
+// del arreglo TABLE).
 static const char TABLE[] =
     " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
     "!?*$#@&^()+-<>0123456789";
-// matriz de codificacion.
+// Matriz de codificacion.
 static const int MATRIX_C[][3] = {{1, 2, 3}, {2, 5, 8}, {3, 6, 10}};
-// matriz de decodificacion.
+// Matriz de decodificacion.
 static const int MATRIX_D[][3] = {{2, -2, 1}, {4, 1, -2}, {-3, 0, 1}};
 
 // Toma un mensaje y su logitud y devuelve su tabla de valores.
@@ -26,8 +27,8 @@ void matrix_encode(ValueTable* vtIn);
 // Toma una tabla de valores codificada y la decodifica.
 void matrix_decode(ValueTable* vtIn);
 
-// Calula la longitud del mensaje y lo guarda en msgLenIn.
-void set_length_msg(char* msgIn, int* msgLenIn);
+// Calula la longitud del mensaje y devuelve la longitud del mensaje.
+unsigned set_length_msg(char* msgIn);
 
 // Destruye la tabla de valores.
 void matrix_destroy(ValueTable* vtIn);
