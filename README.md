@@ -1,4 +1,4 @@
-# Basic crypto sistem writen in c #
+# Basic crypto system writen in c #
 
 ### Summary ###
 
