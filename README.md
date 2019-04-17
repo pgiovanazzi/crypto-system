@@ -1,16 +1,18 @@
-# Ejemplo de criptografia hecho en C #
+# Basic crypto sistem writen in c #
 
-### Resumen ###
+### Summary ###
 
-Encripta y desencripta un mensaje utilizando una matriz y su inversa de 3x3 de enteros.
+Encrypts and decrypts a message using a 3x3 integer matrix and its inverse.
 ___
-### ¿Como ejecutarlo? ###
+### How to execute it? ###
 
-* Se necesita el gcc instalado
-* Escribimos en la terminal $gcc -o NombreDelEjecutable main.c MatrixEncrypt.c
-* Luego lo ejecutamos $./NombreDelEjecutable
+This example is to execute it in Ubuntu/linux
 
-Ejemplo:
+* You need the gcc installed
+* Write in the terminal $gcc -o yourExecutableArchiveName main.c MatrixEncrypt.c
+* Then write $./NombreDelEjecutable
+
+Example:
 ~~~
 $gcc -o test main.c MatrixEncrypt.c
 Ingrese el mensaje a codificar:
