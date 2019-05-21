@@ -10,7 +10,7 @@ This example is to execute it in Ubuntu/linux
 
 * You need the gcc installed
 * Write in the terminal $gcc -o yourExecutableArchiveName main.c MatrixEncrypt.c
-* Then write $./NombreDelEjecutable
+* Then write $./ExecutableArchiveName
 
 Example:
 ~~~
